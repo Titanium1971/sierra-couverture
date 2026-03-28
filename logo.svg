@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
+  <!-- Roof/house shape -->
+  <defs>
+    <linearGradient id="roofGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F4A623"/>
+      <stop offset="100%" stop-color="#E8751A"/>
+    </linearGradient>
+  </defs>
+  <!-- Left pillar -->
+  <rect x="2" y="22" width="8" height="36" rx="1" fill="url(#roofGrad)"/>
+  <!-- Right pillar -->
+  <rect x="30" y="22" width="8" height="36" rx="1" fill="url(#roofGrad)"/>
+  <!-- Roof triangle -->
+  <polygon points="0,24 20,2 40,24" fill="url(#roofGrad)"/>
+  <!-- Small window -->
+  <rect x="14" y="34" width="12" height="14" rx="1" fill="#1a1a2e"/>
+  <rect x="14" y="34" width="12" height="6" rx="1" fill="#2a2a4e"/>
+  <!-- Text SIERRA -->
+  <text x="48" y="30" font-family="Inter, Arial, sans-serif" font-weight="800" font-size="24" fill="#FFFFFF" letter-spacing="1">SIERRA</text>
+  <!-- Text COUVERTURE -->
+  <text x="48" y="48" font-family="Inter, Arial, sans-serif" font-weight="500" font-size="12" fill="#E8751A" letter-spacing="3">COUVERTURE</text>
+</svg>
