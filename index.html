@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sierra Couverture | Couvreur à Agde, Hérault — Toiture, Rénovation, Étanchéité</title>
+<meta name="description" content="Sierra Couverture, artisan couvreur certifié Qualibat RGE à Agde. Toiture neuve, rénovation, réparation, étanchéité, zinguerie. Devis gratuit au 07 45 62 51 06.">
+<meta name="keywords" content="couvreur agde, toiture agde, rénovation toiture hérault, couvreur cap d'agde, étanchéité toiture, zinguerie agde, artisan couvreur 34">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://sierra-couverture.vercel.app/">
+<meta property="og:title" content="Sierra Couverture — Couvreur à Agde">
+<meta property="og:description" content="Artisan couvreur certifié Qualibat RGE. Toiture, rénovation, étanchéité. Devis gratuit.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1a1a2e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --orange: #E8751A;
+  --orange-dark: #c4620f;
+  --dark: #1a1a2e;
+  --dark-2: #16213e;
+  --white: #ffffff;
+  --gray: #f4f4f5;
+  --gray-text: #71717a;
+  --radius: 12px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body { font-family: 'Inter', sans-serif; color: var(--dark); line-height: 1.6; }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(26,26,46,0.95); backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(232,117,26,0.15);
+  padding: 12px 24px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.nav-logo { color: var(--white); font-weight: 700; font-size: 18px; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+.nav-logo span { color: var(--orange); }
+.nav-links { display: flex; gap: 24px; list-style: none; align-items: center; }
+.nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.3s; }
+.nav-links a:hover { color: var(--orange); }
+.nav-cta { background: var(--orange); color: white !important; padding: 10px 24px; border-radius: 8px; font-weight: 600; transition: all 0.3s; }
+.nav-cta:hover { background: var(--orange-dark); transform: translateY(-1px); }
+.mobile-menu { display: none; background: none; border: none; color: white; font-size: 24px; cursor: pointer; }
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .mobile-menu { display: block; }
+  .nav-links.open {
+    display: flex; flex-direction: column; position: absolute;
+    top: 100%; left: 0; right: 0; background: var(--dark);
+    padding: 20px 24px; gap: 16px; border-bottom: 2px solid var(--orange);
+  }
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh; display: flex; align-items: center;
+  background: linear-gradient(135deg, var(--dark) 0%, var(--dark-2) 50%, #0f3460 100%);
+  padding: 120px 24px 80px; position: relative; overflow: hidden;
+}
+.hero::before {
+  content: ''; position: absolute; top: -200px; right: -200px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(232,117,26,0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-container {
+  max-width: 1100px; margin: 0 auto; width: 100%;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+}
+@media (max-width: 900px) { .hero-container { grid-template-columns: 1fr; text-align: center; } }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(232,117,26,0.1); border: 1px solid rgba(232,117,26,0.3);
+  padding: 6px 16px; border-radius: 50px; font-size: 13px; color: var(--orange);
+  font-weight: 500; margin-bottom: 24px;
+}
+.hero h1 { font-size: clamp(36px, 5vw, 56px); font-weight: 800; color: var(--white); line-height: 1.1; margin-bottom: 20px; }
+.hero h1 .accent { color: var(--orange); }
+.hero p { font-size: 18px; color: rgba(255,255,255,0.7); margin-bottom: 32px; line-height: 1.7; }
+.hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+@media (max-width: 900px) { .hero-buttons { justify-content: center; } }
+.btn-primary {
+  background: var(--orange); color: white; padding: 16px 32px; border-radius: 10px;
+  font-weight: 700; font-size: 16px; text-decoration: none; display: inline-flex;
+  align-items: center; gap: 8px; transition: all 0.3s; border: none; cursor: pointer;
+}
+.btn-primary:hover { background: var(--orange-dark); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(232,117,26,0.3); }
+.btn-secondary {
+  background: rgba(255,255,255,0.1); color: white; padding: 16px 32px; border-radius: 10px;
+  font-weight: 600; font-size: 16px; text-decoration: none; display: inline-flex;
+  align-items: center; gap: 8px; transition: all 0.3s; border: 1px solid rgba(255,255,255,0.2);
+}
+.btn-secondary:hover { background: rgba(255,255,255,0.2); }
+.hero-stats {
+  display: flex; gap: 40px; margin-top: 48px;
+  padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.1);
+}
+@media (max-width: 900px) { .hero-stats { justify-content: center; } }
+.hero-stat-value { font-size: 32px; font-weight: 700; color: var(--white); }
+.hero-stat-value .unit { font-size: 18px; color: var(--orange); }
+.hero-stat-label { font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 4px; }
+
+.hero-visual {
+  display: flex; flex-direction: column; gap: 16px;
+}
+.hero-card {
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px; padding: 24px; backdrop-filter: blur(10px);
+}
+.hero-card h3 { color: var(--orange); font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+.hero-card p { color: rgba(255,255,255,0.7); font-size: 14px; }
+.certif-badges { display: flex; gap: 12px; margin-top: 12px; flex-wrap: wrap; }
+.certif-badge {
+  background: rgba(232,117,26,0.15); border: 1px solid rgba(232,117,26,0.3);
+  padding: 6px 14px; border-radius: 8px; font-size: 12px; font-weight: 600; color: var(--orange);
+}
+
+/* SECTIONS */
+.section { padding: 100px 24px; }
+.section-container { max-width: 1100px; margin: 0 auto; }
+.section-tag {
+  display: inline-block; font-size: 12px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 2px; color: var(--orange); margin-bottom: 12px;
+}
+.section-heading { font-size: clamp(28px, 4vw, 42px); font-weight: 700; margin-bottom: 16px; line-height: 1.2; }
+.section-heading .muted { color: var(--gray-text); font-weight: 300; }
+
+/* SERVICES */
+.services-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px;
+}
+@media (max-width: 768px) { .services-grid { grid-template-columns: 1fr; } }
+.service-card {
+  background: var(--white); border: 1px solid #e4e4e7; border-radius: var(--radius);
+  padding: 32px; transition: all 0.3s;
+}
+.service-card:hover { border-color: var(--orange); transform: translateY(-4px); box-shadow: 0 10px 40px rgba(0,0,0,0.08); }
+.service-icon { font-size: 40px; margin-bottom: 16px; }
+.service-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+.service-card p { font-size: 14px; color: var(--gray-text); line-height: 1.6; }
+
+/* POURQUOI */
+.why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 48px; }
+@media (max-width: 768px) { .why-grid { grid-template-columns: 1fr; } }
+.why-card {
+  display: flex; gap: 16px; padding: 24px; background: var(--gray); border-radius: var(--radius);
+}
+.why-icon { font-size: 28px; flex-shrink: 0; }
+.why-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+.why-card p { font-size: 14px; color: var(--gray-text); }
+
+/* CTA */
+.cta-section {
+  background: linear-gradient(135deg, var(--dark) 0%, var(--dark-2) 100%);
+  padding: 80px 24px; text-align: center;
+}
+.cta-section h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 700; color: var(--white); margin-bottom: 16px; }
+.cta-section p { color: rgba(255,255,255,0.7); font-size: 18px; margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
+.cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+/* ZONE */
+.zone-section { background: var(--gray); }
+.zone-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.zone-tag {
+  background: var(--white); border: 1px solid #e4e4e7; padding: 8px 16px;
+  border-radius: 50px; font-size: 13px; font-weight: 500; color: var(--dark);
+}
+
+/* CONTACT */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 48px; }
+@media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
+.contact-info-item { display: flex; gap: 16px; margin-bottom: 24px; }
+.contact-info-icon { font-size: 24px; flex-shrink: 0; width: 48px; height: 48px; background: rgba(232,117,26,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; }
+.contact-info-item h3 { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+.contact-info-item p { font-size: 14px; color: var(--gray-text); }
+.contact-info-item a { color: var(--orange); text-decoration: none; font-weight: 500; }
+
+.contact-form { display: flex; flex-direction: column; gap: 16px; }
+.contact-form input, .contact-form textarea, .contact-form select {
+  padding: 14px 18px; border: 1px solid #e4e4e7; border-radius: 10px;
+  font-family: 'Inter', sans-serif; font-size: 14px; transition: border 0.3s;
+  background: var(--white);
+}
+.contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus {
+  outline: none; border-color: var(--orange);
+}
+.contact-form textarea { resize: vertical; min-height: 100px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 768px) { .form-row { grid-template-columns: 1fr; } }
+
+/* FOOTER */
+footer {
+  background: var(--dark); color: rgba(255,255,255,0.6); padding: 40px 24px;
+  text-align: center; font-size: 13px;
+}
+footer a { color: var(--orange); text-decoration: none; }
+
+/* PHONE FLOAT */
+.phone-float {
+  position: fixed; bottom: 24px; right: 24px; z-index: 99;
+  background: var(--orange); color: white; width: 60px; height: 60px;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 24px; text-decoration: none; box-shadow: 0 4px 20px rgba(232,117,26,0.4);
+  transition: all 0.3s; animation: pulse-phone 2s infinite;
+}
+.phone-float:hover { transform: scale(1.1); }
+@keyframes pulse-phone {
+  0%, 100% { box-shadow: 0 4px 20px rgba(232,117,26,0.4); }
+  50% { box-shadow: 0 4px 30px rgba(232,117,26,0.6); }
+}
+
+/* SCHEMA */
+.schema-org { display: none; }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RoofingContractor",
+  "name": "Sierra Couverture",
+  "telephone": "+33745625106",
+  "email": "sierracouverture@gmail.com",
+  "url": "https://sierra-couverture.vercel.app",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Agde",
+    "addressRegion": "Occitanie",
+    "postalCode": "34300",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 43.3107,
+    "longitude": 3.4731
+  },
+  "areaServed": ["Agde", "Cap d'Agde", "Marseillan", "Sète", "Béziers", "Pézenas", "Hérault"],
+  "knowsAbout": ["Couverture", "Toiture", "Rénovation toiture", "Étanchéité", "Zinguerie", "Charpente"],
+  "hasCredential": [
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "Qualibat" },
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "RGE" }
+  ],
+  "priceRange": "EUR"
+}
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo"><span>Sierra</span> Couverture</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#pourquoi">Pourquoi nous</a></li>
+    <li><a href="#zone">Zone</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="tel:+33745625106" class="nav-cta">07 45 62 51 06</a></li>
+  </ul>
+  <button class="mobile-menu" id="mobileMenu" aria-label="Menu">&#9776;</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-container">
+    <div>
+      <div class="hero-badge">Artisan certifié Qualibat &amp; RGE</div>
+      <h1>Votre <span class="accent">couvreur</span> de confiance à Agde</h1>
+      <p>Toiture neuve, rénovation, réparation et étanchéité. Sierra Couverture intervient dans tout l'Hérault avec un savoir-faire artisanal et des certifications reconnues.</p>
+      <div class="hero-buttons">
+        <a href="tel:+33745625106" class="btn-primary">Appeler maintenant</a>
+        <a href="#contact" class="btn-secondary">Devis gratuit</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-value">10<span class="unit">+</span></div>
+          <div class="hero-stat-label">Années d'expérience</div>
+        </div>
+        <div>
+          <div class="hero-stat-value">500<span class="unit">+</span></div>
+          <div class="hero-stat-label">Toitures réalisées</div>
+        </div>
+        <div>
+          <div class="hero-stat-value">100<span class="unit">%</span></div>
+          <div class="hero-stat-label">Clients satisfaits</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <h3>Intervention rapide</h3>
+        <p>Urgence fuite, tempête, tuiles cassées ? Nous intervenons sous 24h dans tout l'Hérault.</p>
+      </div>
+      <div class="hero-card">
+        <h3>Devis gratuit &amp; sans engagement</h3>
+        <p>Déplacement, diagnostic et devis détaillé offerts. Tarifs transparents, pas de mauvaise surprise.</p>
+      </div>
+      <div class="hero-card">
+        <h3>Certifications</h3>
+        <p>Artisan reconnu pour la qualité de ses prestations et le respect des normes.</p>
+        <div class="certif-badges">
+          <span class="certif-badge">Qualibat</span>
+          <span class="certif-badge">RGE</span>
+          <span class="certif-badge">Artisan</span>
+          <span class="certif-badge">Décennale</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="section-container">
+    <div class="section-tag">Nos services</div>
+    <h2 class="section-heading">Tous les travaux de <span class="muted">couverture.</span></h2>
+    <p style="color: var(--gray-text); max-width: 600px;">De la réparation d'urgence à la toiture neuve, Sierra Couverture vous accompagne sur tous vos projets de couverture et d'étanchéité.</p>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🏠</div>
+        <h3>Toiture neuve</h3>
+        <p>Pose complète de toiture pour construction neuve. Tuiles, ardoises, bac acier. Respect des normes DTU et des réglementations locales.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔧</div>
+        <h3>Rénovation &amp; Réparation</h3>
+        <p>Remplacement de tuiles, réfection partielle ou totale, traitement hydrofuge, démoussage. Redonner vie à votre toiture.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💧</div>
+        <h3>Étanchéité</h3>
+        <p>Toiture-terrasse, membrane EPDM, résine. Solutions durables contre les infiltrations d'eau et l'humidité.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔩</div>
+        <h3>Zinguerie</h3>
+        <p>Gouttières, descentes, chéneaux, habillages de planches de rive. Zinc, aluminium, cuivre. Évacuation des eaux pluviales.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🪵</div>
+        <h3>Charpente</h3>
+        <p>Traitement, renforcement et remplacement de charpente bois. Diagnostic termites et parasites du bois.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🌡️</div>
+        <h3>Isolation toiture</h3>
+        <p>Isolation par l'intérieur ou l'extérieur (sarking). Éligible aux aides MaPrimeRénov' grâce à notre certification RGE.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POURQUOI -->
+<section class="section" id="pourquoi" style="background: var(--gray);">
+  <div class="section-container">
+    <div class="section-tag">Pourquoi nous choisir</div>
+    <h2 class="section-heading">Un artisan <span class="muted">de confiance.</span></h2>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">✓</div>
+        <div>
+          <h3>Certifié Qualibat &amp; RGE</h3>
+          <p>Gage de qualité reconnu. Éligibilité aux aides de l'État pour vos travaux de rénovation énergétique.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">⚡</div>
+        <div>
+          <h3>Réactivité</h3>
+          <p>Intervention sous 24h pour les urgences. Devis sous 48h pour les projets de rénovation.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🛡️</div>
+        <div>
+          <h3>Garantie décennale</h3>
+          <p>Tous nos travaux sont couverts par une assurance décennale. Vous êtes protégé pendant 10 ans.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">💰</div>
+        <div>
+          <h3>Tarifs transparents</h3>
+          <p>Devis gratuit et détaillé. Pas de frais cachés, pas de mauvaise surprise à la fin du chantier.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📍</div>
+        <div>
+          <h3>Artisan local</h3>
+          <p>Basé à Agde, nous connaissons les spécificités climatiques de la région et les toitures locales.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🏗️</div>
+        <div>
+          <h3>Tous types de toiture</h3>
+          <p>Tuiles canal, tuiles mécaniques, ardoises, bac acier, toiture-terrasse. On s'adapte à votre projet.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Un projet de toiture ?</h2>
+  <p>Contactez Sierra Couverture pour un devis gratuit et sans engagement. Intervention rapide dans tout l'Hérault.</p>
+  <div class="cta-buttons">
+    <a href="tel:+33745625106" class="btn-primary">07 45 62 51 06</a>
+    <a href="mailto:sierracouverture@gmail.com" class="btn-secondary">Envoyer un email</a>
+  </div>
+</section>
+
+<!-- ZONE -->
+<section class="section zone-section" id="zone">
+  <div class="section-container">
+    <div class="section-tag">Zone d'intervention</div>
+    <h2 class="section-heading">Tout l'Hérault <span class="muted">et alentours.</span></h2>
+    <p style="color: var(--gray-text);">Sierra Couverture intervient dans un rayon de 50 km autour d'Agde.</p>
+
+    <div class="zone-list">
+      <span class="zone-tag">Agde</span>
+      <span class="zone-tag">Cap d'Agde</span>
+      <span class="zone-tag">Marseillan</span>
+      <span class="zone-tag">Sète</span>
+      <span class="zone-tag">Béziers</span>
+      <span class="zone-tag">Pézenas</span>
+      <span class="zone-tag">Vias</span>
+      <span class="zone-tag">Portiragnes</span>
+      <span class="zone-tag">Florensac</span>
+      <span class="zone-tag">Mèze</span>
+      <span class="zone-tag">Loupian</span>
+      <span class="zone-tag">Frontignan</span>
+      <span class="zone-tag">Montagnac</span>
+      <span class="zone-tag">Servian</span>
+      <span class="zone-tag">Sérignan</span>
+      <span class="zone-tag">Valras</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="section-container">
+    <div class="section-tag">Contact</div>
+    <h2 class="section-heading">Demandez votre <span class="muted">devis gratuit.</span></h2>
+
+    <div class="contact-grid">
+      <div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">📞</div>
+          <div>
+            <h3>Téléphone</h3>
+            <a href="tel:+33745625106">07 45 62 51 06</a>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">✉️</div>
+          <div>
+            <h3>Email</h3>
+            <a href="mailto:sierracouverture@gmail.com">sierracouverture@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">📍</div>
+          <div>
+            <h3>Localisation</h3>
+            <p>Agde, Hérault (34)</p>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">🕐</div>
+          <div>
+            <h3>Horaires</h3>
+            <p>Lun-Ven : 7h30 - 18h30<br>Sam : sur rendez-vous</p>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Nom complet" required>
+          <input type="tel" name="phone" placeholder="Téléphone" required>
+        </div>
+        <input type="email" name="email" placeholder="Email">
+        <select name="service" required>
+          <option value="" disabled selected>Type de travaux</option>
+          <option>Toiture neuve</option>
+          <option>Rénovation / Réparation</option>
+          <option>Étanchéité</option>
+          <option>Zinguerie / Gouttières</option>
+          <option>Charpente</option>
+          <option>Isolation toiture</option>
+          <option>Urgence fuite</option>
+          <option>Autre</option>
+        </select>
+        <textarea name="message" placeholder="Décrivez votre projet (adresse, surface, urgence...)"></textarea>
+        <button type="submit" class="btn-primary" style="justify-content: center;">Envoyer ma demande de devis</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p><strong>Sierra Couverture</strong> — Artisan couvreur à Agde, Hérault</p>
+  <p style="margin-top: 8px;">Certifié Qualibat &amp; RGE | Garantie décennale</p>
+  <p style="margin-top: 8px;">07 45 62 51 06 | <a href="mailto:sierracouverture@gmail.com">sierracouverture@gmail.com</a></p>
+  <p style="margin-top: 16px; font-size: 11px; opacity: 0.6;">Site réalisé par <a href="https://ccdeveloppement.eu" target="_blank">CC Développement</a></p>
+</footer>
+
+<!-- PHONE FLOAT -->
+<a href="tel:+33745625106" class="phone-float" aria-label="Appeler Sierra Couverture">📞</a>
+
+<script>
+document.getElementById('mobileMenu').addEventListener('click', () => {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+});
+document.getElementById('contactForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const fd = new FormData(e.target);
+  const body = `Nom: ${fd.get('name')}%0ATéléphone: ${fd.get('phone')}%0AEmail: ${fd.get('email')}%0AService: ${fd.get('service')}%0AMessage: ${fd.get('message')}`;
+  window.location.href = `mailto:sierracouverture@gmail.com?subject=Demande de devis - ${fd.get('service')}&body=${body}`;
+  alert('Merci ! Votre demande de devis va être envoyée par email.');
+});
+</script>
+
+</body>
+</html>

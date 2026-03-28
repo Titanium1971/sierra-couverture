@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sierra-couverture.vercel.app/sitemap.xml
