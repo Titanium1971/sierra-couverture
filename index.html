@@ -157,6 +157,27 @@ nav {
 .why-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
 .why-card p { font-size: 14px; color: var(--gray-text); }
 
+/* REALISATIONS */
+.realisations-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+@media (max-width: 768px) { .realisations-grid { grid-template-columns: 1fr; } }
+.realisation-card {
+  background: var(--white); border-radius: var(--radius); overflow: hidden;
+  border: 1px solid #e4e4e7; transition: all 0.3s;
+}
+.realisation-card:hover { transform: translateY(-4px); box-shadow: 0 10px 40px rgba(0,0,0,0.08); }
+.realisation-card h3 { font-size: 16px; font-weight: 700; padding: 16px 20px 4px; }
+.realisation-card > p { font-size: 13px; color: var(--gray-text); padding: 0 20px 20px; line-height: 1.5; }
+.ba-container { display: grid; grid-template-columns: 1fr 1fr; }
+.ba-image { position: relative; overflow: hidden; aspect-ratio: 3/2; }
+.ba-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+.realisation-card:hover .ba-image img { transform: scale(1.05); }
+.ba-label {
+  position: absolute; bottom: 8px; left: 8px;
+  background: rgba(220,38,38,0.9); color: white; font-size: 10px; font-weight: 700;
+  padding: 3px 10px; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px;
+}
+.ba-label-after { background: rgba(22,163,74,0.9); left: auto; right: 8px; }
+
 /* CTA */
 .cta-section {
   background: linear-gradient(135deg, var(--dark) 0%, var(--dark-2) 100%);
@@ -405,6 +426,62 @@ footer a { color: var(--orange); text-decoration: none; }
           <h3>Tous types de toiture</h3>
           <p>Tuiles canal, tuiles mécaniques, ardoises, bac acier, toiture-terrasse. On s'adapte à votre projet.</p>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REALISATIONS -->
+<section class="section" id="realisations" style="background: var(--gray);">
+  <div class="section-container">
+    <div class="section-tag">Nos réalisations</div>
+    <h2 class="section-heading">Avant / <span class="muted">Après.</span></h2>
+    <p style="color: var(--gray-text); max-width: 600px; margin-bottom: 48px;">Découvrez quelques-unes de nos interventions récentes dans l'Hérault.</p>
+
+    <div class="realisations-grid">
+      <div class="realisation-card">
+        <div class="ba-container">
+          <div class="ba-image ba-before">
+            <img src="https://images.unsplash.com/photo-1632178050091-f6c6e tried1d1?w=600&h=400&fit=crop&q=80" alt="Toiture avant rénovation" loading="lazy">
+            <span class="ba-label">Avant</span>
+          </div>
+          <div class="ba-image ba-after">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop&q=80" alt="Toiture après rénovation" loading="lazy">
+            <span class="ba-label ba-label-after">Après</span>
+          </div>
+        </div>
+        <h3>Réfection complète de toiture</h3>
+        <p>Remplacement intégral des tuiles canal, pose de sous-toiture et traitement hydrofuge. Agde centre-ville.</p>
+      </div>
+
+      <div class="realisation-card">
+        <div class="ba-container">
+          <div class="ba-image ba-before">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop&q=80" alt="Gouttières avant" loading="lazy">
+            <span class="ba-label">Avant</span>
+          </div>
+          <div class="ba-image ba-after">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&h=400&fit=crop&q=80" alt="Gouttières après" loading="lazy">
+            <span class="ba-label ba-label-after">Après</span>
+          </div>
+        </div>
+        <h3>Zinguerie et gouttières</h3>
+        <p>Remplacement des gouttières zinc et descentes. Habillage planches de rive. Villa au Cap d'Agde.</p>
+      </div>
+
+      <div class="realisation-card">
+        <div class="ba-container">
+          <div class="ba-image ba-before">
+            <img src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?w=600&h=400&fit=crop&q=80" alt="Toiture terrasse avant" loading="lazy">
+            <span class="ba-label">Avant</span>
+          </div>
+          <div class="ba-image ba-after">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop&q=80" alt="Toiture terrasse après" loading="lazy">
+            <span class="ba-label ba-label-after">Après</span>
+          </div>
+        </div>
+        <h3>Étanchéité toiture-terrasse</h3>
+        <p>Pose membrane EPDM sur toiture-terrasse. Traitement des remontées et évacuations. Marseillan plage.</p>
       </div>
     </div>
   </div>
